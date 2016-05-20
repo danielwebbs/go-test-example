@@ -1,0 +1,17 @@
+Coverage %: go test -cover
+Coverage data file to be written to: go test pack -coverprofile= filename
+Write coverage data to file: go tool cover -func= filename
+
+
+Test Type Prefixes:
+Benchmark : benchmark test
+Test : standard test
+Example:
+
+
+Benchmark commands:
+Benchmark test specified file: go test pack -bench .
+  The Feedback from this is the following:
+      - number ns/op with ns being nano seconds and op being a run. The average time taken per a single execution
+      - a decimal number before the ns/op value is the amount of times the test was executed
+      - the last value is time taken, even for one second of testing, this might be two seconds as it takes go time to workout how many tests to benchmark
